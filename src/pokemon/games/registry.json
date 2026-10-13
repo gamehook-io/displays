@@ -1,0 +1,776 @@
+{
+  "emerald": {
+    "key": "emerald",
+    "id": "005fdd01-8921-468c-aca3-d4fa864d5911",
+    "name": "Pokemon Emerald",
+    "platform": "GBA",
+    "nativeProcessor": "b42f3152",
+    "generation": 3,
+    "versions": [
+      "emerald"
+    ],
+    "region": "Hoenn",
+    "activeSource": "direct",
+    "trainerFlag": "battle.flags.trainer",
+    "badges": [
+      {
+        "index": 0,
+        "name": "Stone"
+      },
+      {
+        "index": 1,
+        "name": "Knuckle"
+      },
+      {
+        "index": 2,
+        "name": "Dynamo"
+      },
+      {
+        "index": 3,
+        "name": "Heat"
+      },
+      {
+        "index": 4,
+        "name": "Balance"
+      },
+      {
+        "index": 5,
+        "name": "Feather"
+      },
+      {
+        "index": 6,
+        "name": "Mind"
+      },
+      {
+        "index": 7,
+        "name": "Rain"
+      }
+    ]
+  },
+  "firered_leafgreen": {
+    "key": "firered_leafgreen",
+    "id": "005fdd01-8921-468c-aca3-d4fa864d5909",
+    "name": "Pokemon FireRed and LeafGreen",
+    "platform": "GBA",
+    "nativeProcessor": "ccd04ebe",
+    "generation": 3,
+    "versions": [
+      "firered",
+      "leafgreen"
+    ],
+    "region": "Kanto",
+    "activeSource": "direct",
+    "trainerFlag": "battle.flags.trainer",
+    "badges": [
+      {
+        "index": 0,
+        "name": "Boulder"
+      },
+      {
+        "index": 1,
+        "name": "Cascade"
+      },
+      {
+        "index": 2,
+        "name": "Thunder"
+      },
+      {
+        "index": 3,
+        "name": "Rainbow"
+      },
+      {
+        "index": 4,
+        "name": "Soul"
+      },
+      {
+        "index": 5,
+        "name": "Marsh"
+      },
+      {
+        "index": 6,
+        "name": "Volcano"
+      },
+      {
+        "index": 7,
+        "name": "Earth"
+      }
+    ]
+  },
+  "ruby_sapphire": {
+    "key": "ruby_sapphire",
+    "id": "0ccf4618-3439-4cf7-84f8-4c2de3a89349",
+    "name": "Pokemon Ruby and Sapphire",
+    "platform": "GBA",
+    "nativeProcessor": "fa4e8780",
+    "generation": 3,
+    "versions": [
+      "ruby",
+      "sapphire"
+    ],
+    "region": "Hoenn",
+    "activeSource": "direct",
+    "trainerFlag": "battle.battle_flags.trainer",
+    "badges": [
+      {
+        "index": 0,
+        "name": "Stone"
+      },
+      {
+        "index": 1,
+        "name": "Knuckle"
+      },
+      {
+        "index": 2,
+        "name": "Dynamo"
+      },
+      {
+        "index": 3,
+        "name": "Heat"
+      },
+      {
+        "index": 4,
+        "name": "Balance"
+      },
+      {
+        "index": 5,
+        "name": "Feather"
+      },
+      {
+        "index": 6,
+        "name": "Mind"
+      },
+      {
+        "index": 7,
+        "name": "Rain"
+      }
+    ]
+  },
+  "crystal": {
+    "key": "crystal",
+    "id": "9f46da7e-5087-439d-bcc8-7fe81e54e988",
+    "name": "Pokemon Crystal",
+    "platform": "GBC",
+    "nativeProcessor": null,
+    "generation": 2,
+    "versions": [
+      "crystal"
+    ],
+    "region": "Johto",
+    "activeSource": "direct",
+    "trainerFlag": null,
+    "badges": [
+      {
+        "index": 0,
+        "name": "Zephyr"
+      },
+      {
+        "index": 1,
+        "name": "Hive"
+      },
+      {
+        "index": 2,
+        "name": "Plain"
+      },
+      {
+        "index": 3,
+        "name": "Fog"
+      },
+      {
+        "index": 4,
+        "name": "Storm"
+      },
+      {
+        "index": 5,
+        "name": "Mineral"
+      },
+      {
+        "index": 6,
+        "name": "Glacier"
+      },
+      {
+        "index": 7,
+        "name": "Rising"
+      },
+      {
+        "index": 8,
+        "name": "Boulder"
+      },
+      {
+        "index": 9,
+        "name": "Cascade"
+      },
+      {
+        "index": 10,
+        "name": "Thunder"
+      },
+      {
+        "index": 11,
+        "name": "Rainbow"
+      },
+      {
+        "index": 12,
+        "name": "Soul"
+      },
+      {
+        "index": 13,
+        "name": "Marsh"
+      },
+      {
+        "index": 14,
+        "name": "Volcano"
+      },
+      {
+        "index": 15,
+        "name": "Earth"
+      }
+    ]
+  },
+  "gold_silver": {
+    "key": "gold_silver",
+    "id": "161a9132-9f4d-4679-9cc1-11f794253cf1",
+    "name": "Pokemon Gold and Silver",
+    "platform": "GBC",
+    "nativeProcessor": null,
+    "generation": 2,
+    "versions": [
+      "gold",
+      "silver"
+    ],
+    "region": "Johto",
+    "activeSource": "direct",
+    "trainerFlag": null,
+    "badges": [
+      {
+        "index": 0,
+        "name": "Zephyr"
+      },
+      {
+        "index": 1,
+        "name": "Hive"
+      },
+      {
+        "index": 2,
+        "name": "Plain"
+      },
+      {
+        "index": 3,
+        "name": "Fog"
+      },
+      {
+        "index": 4,
+        "name": "Storm"
+      },
+      {
+        "index": 5,
+        "name": "Mineral"
+      },
+      {
+        "index": 6,
+        "name": "Glacier"
+      },
+      {
+        "index": 7,
+        "name": "Rising"
+      },
+      {
+        "index": 8,
+        "name": "Boulder"
+      },
+      {
+        "index": 9,
+        "name": "Cascade"
+      },
+      {
+        "index": 10,
+        "name": "Thunder"
+      },
+      {
+        "index": 11,
+        "name": "Rainbow"
+      },
+      {
+        "index": 12,
+        "name": "Soul"
+      },
+      {
+        "index": 13,
+        "name": "Marsh"
+      },
+      {
+        "index": 14,
+        "name": "Volcano"
+      },
+      {
+        "index": 15,
+        "name": "Earth"
+      }
+    ]
+  },
+  "red_blue": {
+    "key": "red_blue",
+    "id": "e1396b30-2dc2-11ee-be56-0242ac120002",
+    "name": "Pokemon Red and Blue",
+    "platform": "GB",
+    "nativeProcessor": null,
+    "generation": 1,
+    "versions": [
+      "red",
+      "blue"
+    ],
+    "region": "Kanto",
+    "activeSource": "direct",
+    "trainerFlag": null,
+    "badges": [
+      {
+        "index": 0,
+        "name": "Boulder"
+      },
+      {
+        "index": 1,
+        "name": "Cascade"
+      },
+      {
+        "index": 2,
+        "name": "Thunder"
+      },
+      {
+        "index": 3,
+        "name": "Rainbow"
+      },
+      {
+        "index": 4,
+        "name": "Soul"
+      },
+      {
+        "index": 5,
+        "name": "Marsh"
+      },
+      {
+        "index": 6,
+        "name": "Volcano"
+      },
+      {
+        "index": 7,
+        "name": "Earth"
+      }
+    ]
+  },
+  "yellow": {
+    "key": "yellow",
+    "id": "53e2cddd-b5db-4a6f-939b-b7dba5f9fd64",
+    "name": "Pokemon Yellow",
+    "platform": "GB",
+    "nativeProcessor": null,
+    "generation": 1,
+    "versions": [
+      "yellow"
+    ],
+    "region": "Kanto",
+    "activeSource": "direct",
+    "trainerFlag": null,
+    "badges": [
+      {
+        "index": 0,
+        "name": "Boulder"
+      },
+      {
+        "index": 1,
+        "name": "Cascade"
+      },
+      {
+        "index": 2,
+        "name": "Thunder"
+      },
+      {
+        "index": 3,
+        "name": "Rainbow"
+      },
+      {
+        "index": 4,
+        "name": "Soul"
+      },
+      {
+        "index": 5,
+        "name": "Marsh"
+      },
+      {
+        "index": 6,
+        "name": "Volcano"
+      },
+      {
+        "index": 7,
+        "name": "Earth"
+      }
+    ]
+  },
+  "black": {
+    "key": "black",
+    "id": "16406c08-1e4c-434d-83c6-0ea4f089ffd6",
+    "name": "Pokemon Black - Beta",
+    "platform": "NDS",
+    "nativeProcessor": "f248e50b",
+    "generation": 5,
+    "versions": [
+      "black"
+    ],
+    "region": "Unova",
+    "activeSource": "party",
+    "trainerFlag": null,
+    "badges": [
+      {
+        "index": 0,
+        "name": "Trio"
+      },
+      {
+        "index": 1,
+        "name": "Basic"
+      },
+      {
+        "index": 2,
+        "name": "Insect"
+      },
+      {
+        "index": 3,
+        "name": "Bolt"
+      },
+      {
+        "index": 4,
+        "name": "Quake"
+      },
+      {
+        "index": 5,
+        "name": "Jet"
+      },
+      {
+        "index": 6,
+        "name": "Freeze"
+      },
+      {
+        "index": 7,
+        "name": "Legend"
+      }
+    ]
+  },
+  "black_2": {
+    "key": "black_2",
+    "id": "16406c08-1e4c-434d-83c6-0ea4f089ffd6",
+    "name": "Pokemon Black 2 - Beta",
+    "platform": "NDS",
+    "nativeProcessor": "f2452fcc",
+    "generation": 5,
+    "versions": [
+      "black-2"
+    ],
+    "region": "Unova",
+    "activeSource": "party",
+    "trainerFlag": null,
+    "badges": [
+      {
+        "index": 0,
+        "name": "Basic"
+      },
+      {
+        "index": 1,
+        "name": "Toxic"
+      },
+      {
+        "index": 2,
+        "name": "Insect"
+      },
+      {
+        "index": 3,
+        "name": "Bolt"
+      },
+      {
+        "index": 4,
+        "name": "Quake"
+      },
+      {
+        "index": 5,
+        "name": "Jet"
+      },
+      {
+        "index": 6,
+        "name": "Legend"
+      },
+      {
+        "index": 7,
+        "name": "Wave"
+      }
+    ]
+  },
+  "diamond_pearl": {
+    "key": "diamond_pearl",
+    "id": "7ae693c4-1b65-4201-872a-bb27e7d3ab5b",
+    "name": "Pokemon Diamond and Pearl - Beta",
+    "platform": "NDS",
+    "nativeProcessor": "fdb97126",
+    "generation": 4,
+    "versions": [
+      "diamond",
+      "pearl"
+    ],
+    "region": "Sinnoh",
+    "activeSource": "party",
+    "trainerFlag": null,
+    "badges": [
+      {
+        "index": 0,
+        "name": "Coal"
+      },
+      {
+        "index": 1,
+        "name": "Forest"
+      },
+      {
+        "index": 2,
+        "name": "Cobble"
+      },
+      {
+        "index": 3,
+        "name": "Fen"
+      },
+      {
+        "index": 4,
+        "name": "Relic"
+      },
+      {
+        "index": 5,
+        "name": "Mine"
+      },
+      {
+        "index": 6,
+        "name": "Icicle"
+      },
+      {
+        "index": 7,
+        "name": "Beacon"
+      }
+    ]
+  },
+  "heartgold_soulsilver": {
+    "key": "heartgold_soulsilver",
+    "id": "c55dbc2b-40fb-4b3e-b164-66869a07e9e7",
+    "name": "Pokemon HeartGold and SoulSilver - Beta",
+    "platform": "NDS",
+    "nativeProcessor": "c1b41fa3",
+    "generation": 4,
+    "versions": [
+      "heartgold",
+      "soulsilver"
+    ],
+    "region": "Johto",
+    "activeSource": "party",
+    "trainerFlag": null,
+    "badges": [
+      {
+        "index": 0,
+        "name": "Zephyr"
+      },
+      {
+        "index": 1,
+        "name": "Hive"
+      },
+      {
+        "index": 2,
+        "name": "Plain"
+      },
+      {
+        "index": 3,
+        "name": "Fog"
+      },
+      {
+        "index": 4,
+        "name": "Storm"
+      },
+      {
+        "index": 5,
+        "name": "Mineral"
+      },
+      {
+        "index": 6,
+        "name": "Glacier"
+      },
+      {
+        "index": 7,
+        "name": "Rising"
+      },
+      {
+        "index": 8,
+        "name": "Boulder"
+      },
+      {
+        "index": 9,
+        "name": "Cascade"
+      },
+      {
+        "index": 10,
+        "name": "Thunder"
+      },
+      {
+        "index": 11,
+        "name": "Rainbow"
+      },
+      {
+        "index": 12,
+        "name": "Soul"
+      },
+      {
+        "index": 13,
+        "name": "Marsh"
+      },
+      {
+        "index": 14,
+        "name": "Volcano"
+      },
+      {
+        "index": 15,
+        "name": "Earth"
+      }
+    ]
+  },
+  "platinum": {
+    "key": "platinum",
+    "id": "03df12cd-aa9f-422a-bc99-58593841b1ef",
+    "name": "Pokemon Platinum",
+    "platform": "NDS",
+    "nativeProcessor": "bdb9cfce",
+    "generation": 4,
+    "versions": [
+      "platinum"
+    ],
+    "region": "Sinnoh",
+    "activeSource": "party",
+    "trainerFlag": null,
+    "badges": [
+      {
+        "index": 0,
+        "name": "Coal"
+      },
+      {
+        "index": 1,
+        "name": "Forest"
+      },
+      {
+        "index": 2,
+        "name": "Cobble"
+      },
+      {
+        "index": 3,
+        "name": "Fen"
+      },
+      {
+        "index": 4,
+        "name": "Relic"
+      },
+      {
+        "index": 5,
+        "name": "Mine"
+      },
+      {
+        "index": 6,
+        "name": "Icicle"
+      },
+      {
+        "index": 7,
+        "name": "Beacon"
+      }
+    ]
+  },
+  "white": {
+    "key": "white",
+    "id": "d85071bb-6151-44a0-b15e-f593f2d17e17",
+    "name": "Pokemon White - Beta",
+    "platform": "NDS",
+    "nativeProcessor": "cacbced9",
+    "generation": 5,
+    "versions": [
+      "white"
+    ],
+    "region": "Unova",
+    "activeSource": "party",
+    "trainerFlag": null,
+    "badges": [
+      {
+        "index": 0,
+        "name": "Trio"
+      },
+      {
+        "index": 1,
+        "name": "Basic"
+      },
+      {
+        "index": 2,
+        "name": "Insect"
+      },
+      {
+        "index": 3,
+        "name": "Bolt"
+      },
+      {
+        "index": 4,
+        "name": "Quake"
+      },
+      {
+        "index": 5,
+        "name": "Jet"
+      },
+      {
+        "index": 6,
+        "name": "Freeze"
+      },
+      {
+        "index": 7,
+        "name": "Legend"
+      }
+    ]
+  },
+  "white_2": {
+    "key": "white_2",
+    "id": "16406c08-1e4c-434d-83c6-0ea4f089ffd6",
+    "name": "Pokemon White 2 - Beta",
+    "platform": "NDS",
+    "nativeProcessor": "a44171aa",
+    "generation": 5,
+    "versions": [
+      "white-2"
+    ],
+    "region": "Unova",
+    "activeSource": "party",
+    "trainerFlag": null,
+    "badges": [
+      {
+        "index": 0,
+        "name": "Basic"
+      },
+      {
+        "index": 1,
+        "name": "Toxic"
+      },
+      {
+        "index": 2,
+        "name": "Insect"
+      },
+      {
+        "index": 3,
+        "name": "Bolt"
+      },
+      {
+        "index": 4,
+        "name": "Quake"
+      },
+      {
+        "index": 5,
+        "name": "Jet"
+      },
+      {
+        "index": 6,
+        "name": "Legend"
+      },
+      {
+        "index": 7,
+        "name": "Wave"
+      }
+    ]
+  }
+}

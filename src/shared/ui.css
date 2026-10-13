@@ -1,0 +1,52 @@
+/* Rules shared by every overlay: fonts, glass panel, resource bars, and stat grids. */
+@font-face {
+  font-family: 'Outfit';
+  src: url('./fonts/Outfit-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: block;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./fonts/JetBrainsMono-Variable.woff2') format('woff2');
+  font-weight: 100 800;
+  font-display: block;
+}
+
+.overlay-scene { pointer-events: none; user-select: none; }
+
+.panel {
+  position: relative;
+  background: linear-gradient(180deg, var(--glass-highlight), transparent 40%), var(--glass);
+  border: 1px solid var(--glass-edge);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px #0006, inset 0 1px 0 #ffffff1a;
+}
+.panel { padding: 12px; }
+.panel h2 { margin: 0; text-align: center; font-size: 24px; font-weight: 700; line-height: 32px; letter-spacing: -.3px; }
+
+.health-row { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; align-items: center; gap: 8px; height: 24px; font: 600 13px var(--mono); padding: 2px 0; }
+.health-row > span:first-child { color: var(--ink-muted); font: 700 11px var(--sans); letter-spacing: 1px; }
+.health-row > span:last-child { min-width: 48px; text-align: right; font-variant-numeric: tabular-nums; }
+.meter { height: 10px; flex: 1; background: #ffffff14; overflow: hidden; border-radius: 999px; box-shadow: inset 0 1px 2px #0008; }
+.meter > div { height: 100%; border-radius: inherit; background-color: #3ddc84; background-image: linear-gradient(180deg, #ffffff55, transparent 60%); box-shadow: 0 0 10px #3ddc8466; transition: width .4s ease; }
+
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 4px; }
+.stat {
+  --stat: #8d94a6;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  height: 52px;
+  padding: 6px 12px 6px 14px;
+  background: linear-gradient(90deg, var(--stat-tint), var(--tile) 70%);
+  border-radius: var(--radius-sm);
+  box-shadow: inset 3px 0 0 var(--stat);
+}
+.stat span { font-size: 12px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--ink-soft); }
+.stat b { text-align: right; font: 700 24px/1 var(--mono); font-variant-numeric: tabular-nums; }
+.stat-hp { --stat: #5fd38a; --stat-tint: #5fd38a33; }
+.stat-speed { --stat: #c48ff0; --stat-tint: #c48ff033; }
+.stat-attack { --stat: #f2b552; --stat-tint: #f2b55233; }
+.stat-special_attack { --stat: #4fd1c5; --stat-tint: #4fd1c533; }
+.stat-defense { --stat: #f08a5d; --stat-tint: #f08a5d33; }
+.stat-special_defense, .stat-special { --stat: #7f9cf5; --stat-tint: #7f9cf533; }
