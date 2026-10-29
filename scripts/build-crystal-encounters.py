@@ -86,5 +86,5 @@ for match in re.finditer(r'map_id\s+(\w+)(.*?)(?=\n\s*map_id|\n\s*db -1)', text,
     flag = 'yanma_swarm' if match[1] == 'ROUTE_35' else 'dunsparce_swarm'
     entry = result.setdefault(maps[match[1]], {})
     entry['Swarm'] = {'flag': flag, **{period: [[dex, level, chance] for (level, dex), chance in zip(rows[i*7:(i+1)*7], [30,30,20,10,5,4,1])] for i, period in enumerate(['Morning','Day','Night'])}}
-Path('src/pokemon/crystal-encounters.json').write_text(json.dumps(result, separators=(',', ':')) + '\n')
+Path('src/shared/pokemon/crystal-encounters.json').write_text(json.dumps(result, separators=(',', ':')) + '\n')
 print(f'Generated {len(result)} Crystal encounter maps')

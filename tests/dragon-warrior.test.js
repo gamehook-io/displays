@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import references from '../src/dragon-warrior-1/references.json' with { type: 'json' };
-import { activeEnemyName, acceptsMapper, mapper, referenceValue, inventoryItems, knownSpells, numericEntries } from '../src/dragon-warrior-1/data.js';
-import { createDragonWarriorDemo } from '../src/dragon-warrior-1/demo.js';
+import references from '../src/stream-overlays/dragon-warrior-1/references.json' with { type: 'json' };
+import { activeEnemyName, acceptsMapper, mapper, referenceValue, inventoryItems, knownSpells, numericEntries } from '../src/stream-overlays/dragon-warrior-1/data.js';
+import { createDragonWarriorDemo } from '../src/stream-overlays/dragon-warrior-1/demo.js';
 
 const read = data => (path, fallback) => path.split('.').reduce((node, key) => node?.[key], data) ?? fallback;
 test('Dragon Warrior selection rejects other games and ID collisions', () => {

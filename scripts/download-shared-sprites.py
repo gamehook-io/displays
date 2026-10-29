@@ -2,13 +2,13 @@
 
 Usage: python3 scripts/download-shared-sprites.py
 Existing valid PNG files are retained. This is a development-time download;
-the overlay serves the bundled files without external requests.
+the display serves the bundled files without external requests.
 """
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.request import urlopen
 
-root = Path(__file__).resolve().parents[1] / 'src/pokemon/public/assets/pokemon/shared'
+root = Path(__file__).resolve().parents[1] / 'src/shared/assets/pokemon/shared'
 root.mkdir(parents=True, exist_ok=True)
 signature = b'\x89PNG\r\n\x1a\n'
 

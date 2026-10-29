@@ -41,7 +41,7 @@ for path in sorted(Path(sys.argv[1]).glob('*/pokemon*.xml')):
     }
 if len(result) != len(versions):
     raise ValueError('A required Pokémon mapper is missing')
-target = Path('src/pokemon/games/registry.json')
+target = Path('src/shared/pokemon/games/registry.json')
 target.parent.mkdir(parents=True, exist_ok=True)
 target.write_text(json.dumps(result, indent=2) + '\n')
 print(f'Generated {len(result)} mapper families, {sum(len(game["versions"]) for game in result.values())} releases')

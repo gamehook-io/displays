@@ -14,7 +14,7 @@ root = Path(sys.argv[1])
 def rows(name):
     path = root / f'{name}.csv'
     if not path.exists():
-        path = root / f'overlay-{name}.csv'
+        path = root / f'display-{name}.csv'
     with path.open(newline='') as source:
         return list(csv.DictReader(source))
 
@@ -44,5 +44,5 @@ for row in rows('pokemon'):
     result[dex] = entry
 if not all(dex in result for dex in range(1, 252)):
     raise ValueError('Species typing must cover all 251 Crystal species')
-Path('src/pokemon/pokemon-types.json').write_text(json.dumps(result, separators=(',', ':')) + '\n')
+Path('src/shared/pokemon/pokemon-types.json').write_text(json.dumps(result, separators=(',', ':')) + '\n')
 print(f'Generated typing for {len(result)} species')

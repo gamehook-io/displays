@@ -13,7 +13,7 @@ export function Scene(props) {
   onCleanup(() => window.removeEventListener('resize', resize));
   return <main class="overlay-scene" style={{ width: `${size().width}px`, height: `${size().height}px`, transform: `scale(${size().scale})` }}>{props.children}</main>;
 }
-export function ConnectedOverlay(props) {
+export function ConnectedDisplay(props) {
   const gamehook = useGamehook();
   return <Show when={gamehook.status() === 'connected' || gamehook.status() === 'demo'}>{props.children}</Show>;
 }

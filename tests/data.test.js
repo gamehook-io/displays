@@ -1,12 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { access } from 'node:fs/promises';
-import { routeEncounters } from '../src/pokemon/encounters.js';
-import { activeTypes, palettes, themeStyle } from '../src/pokemon/types.js';
-import tables from '../src/pokemon/crystal-encounters.json' with { type: 'json' };
-import { moveType } from '../src/pokemon/moves.js';
-import { createDemo } from '../src/pokemon/demo.js';
-import { statusDetails } from '../src/pokemon/status.js';
+import { routeEncounters } from '../src/shared/pokemon/encounters.js';
+import { activeTypes, palettes, themeStyle } from '../src/shared/pokemon/types.js';
+import tables from '../src/shared/pokemon/crystal-encounters.json' with { type: 'json' };
+import { moveType } from '../src/shared/pokemon/moves.js';
+import { createDemo } from '../src/shared/pokemon/demo.js';
+import { statusDetails } from '../src/shared/pokemon/status.js';
 const read = data => (path, fallback) => path.split('.').reduce((node, key) => node?.[key], data) ?? fallback;
 const route = (period = 'Day', movement = 'Walk', group = 'New Bark', index = 3) => read({ overworld: { map_group: group, map_index: index, movement_state: movement }, time: { current: { time_of_day: period } } });
 test('Route 29 changes species with the period and grass probabilities total 100', () => {
@@ -79,7 +79,7 @@ test('all encounter slots refer to bundled Crystal artwork and valid weights', a
     }
     for (const slots of Object.values(table.Fishing || {})) for (const row of slots) { if (row.dex) ids.add(row.dex); else { ids.add(row.day[0]); ids.add(row.night[0]); } }
   }
-  await Promise.all([...ids].map(dex => access(new URL(`../src/pokemon/public/assets/pokemon/${dex}.png`, import.meta.url))));
+  await Promise.all([...ids].map(dex => access(new URL(`../src/shared/assets/pokemon/${dex}.png`, import.meta.url))));
 });
 test('primary type is historical for Crystal, explicit mapper types take priority, absence is neutral', () => {
   assert.deepEqual(activeTypes(read({ player: { active_pokemon: { dex_number: 158, species: 'Totodile' } } }), 'player.active_pokemon'), ['water']);

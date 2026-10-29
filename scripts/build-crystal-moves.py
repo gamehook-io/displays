@@ -16,5 +16,5 @@ rows = re.findall(r'^\s*move\s+(\w+),\s*\w+,\s*\d+,\s*(\w+),', source.read_text(
 if len(rows) != 251:
     raise ValueError(f'Expected 251 Crystal moves, found {len(rows)}')
 result = [{'name': name.replace('_', '').lower(), 'type': move_type.removesuffix('_TYPE').lower()} for name, move_type in rows]
-Path('src/pokemon/crystal-moves.json').write_text(json.dumps(result, separators=(',', ':')) + '\n')
+Path('src/shared/pokemon/crystal-moves.json').write_text(json.dumps(result, separators=(',', ':')) + '\n')
 print(f'Generated {len(result)} Crystal move types')

@@ -1,11 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { access } from 'node:fs/promises';
-import { registry, identifyGame, resolvePokemonValue } from '../src/pokemon/games/index.js';
-import { createDemo } from '../src/pokemon/demo.js';
-import { speciesTypes } from '../src/pokemon/types.js';
-import { moveType } from '../src/pokemon/moves.js';
-import { routeEncounters } from '../src/pokemon/encounters.js';
+import { registry, identifyGame, resolvePokemonValue } from '../src/shared/pokemon/games/index.js';
+import { createDemo } from '../src/shared/pokemon/demo.js';
+import { speciesTypes } from '../src/shared/pokemon/types.js';
+import { moveType } from '../src/shared/pokemon/moves.js';
+import { routeEncounters } from '../src/shared/pokemon/encounters.js';
 const read = data => path => path.split('.').reduce((node, key) => node?.[key], data);
 
 test('all installed mainline mapper families expose the same player view', () => {
@@ -45,7 +45,7 @@ test('paired stock encounter tables never guess a ROM version', () => {
   assert.equal(encounters.reduce((sum, entry) => sum + entry.chance, 0), 100);
 });
 test('shared artwork exists for every national species', async () => {
-  await Promise.all(Array.from({ length: 1025 }, (_, index) => access(new URL(`../src/pokemon/public/assets/pokemon/shared/${index + 1}.png`, import.meta.url))));
+  await Promise.all(Array.from({ length: 1025 }, (_, index) => access(new URL(`../src/shared/assets/pokemon/shared/${index + 1}.png`, import.meta.url))));
 });
 test('ambiguous unmarked swarm tables cannot leak species into stock routes', () => {
   const data = { overworld: { map_name: 'Route 32' }, time: { current: { time_of_day: 'Day' } } };

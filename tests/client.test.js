@@ -58,7 +58,7 @@ test('mapper policy reports author instructions before opening an unsupported st
   h.client.stop();
 });
 
-test('the wrong game mapper never mounts the overlay or opens a socket', async () => {
+test('the wrong game mapper never mounts the display or opens a socket', async () => {
   const h = harness({ expectedMapperId: 'expected', request: async () => ({ ok: true, json: async () => ({ id: 'other' }) }) });
   h.client.start(); await flush();
   assert.equal(h.sockets.length, 0);

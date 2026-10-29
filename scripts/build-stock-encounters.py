@@ -35,5 +35,5 @@ for row in rows('encounters'):
     route = location[location.index('Route '):].lower().replace(' ', '')
     entry = [int(row['pokemon_id']), int(row['min_level']), int(row['max_level']), method, chance, period]
     result.setdefault(version, {}).setdefault(route, []).append(entry)
-Path('src/pokemon/games/stock-encounters.json').write_text(json.dumps(result, separators=(',', ':')) + '\n')
+Path('src/shared/pokemon/games/stock-encounters.json').write_text(json.dumps(result, separators=(',', ':')) + '\n')
 print('Generated route tables:', {version: len(routes) for version, routes in result.items()})

@@ -21,5 +21,5 @@ for row in rows('moves'):
     if past:
         entry['past'] = past
     result[row['id']] = entry
-Path('src/pokemon/move-types.json').write_text(json.dumps(result, separators=(',', ':')) + '\n')
+Path('src/shared/pokemon/move-types.json').write_text(json.dumps(result, separators=(',', ':')) + '\n')
 print(f'Generated {len(result)} move types')

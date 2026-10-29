@@ -1,0 +1,9 @@
+/* Story frames. Scene stories sit on a checkerboard that stands for the transparent canvas;
+   widget stories sit in a 400px rail like the real left/right columns. */
+html, body, #storybook-root { margin: 0; height: 100%; }
+.sb-checker { position: fixed; inset: 0; background: repeating-conic-gradient(#2a2d36 0 25%, #1d1f26 0 50%) 0 0 / 32px 32px; }
+.sb-rail {
+  width: 400px; min-height: 100vh; padding: 14px; display: flex; flex-direction: column; gap: 10px; box-sizing: border-box;
+  background-color: var(--theme-deep);
+  background-image: radial-gradient(circle at 20% 8%, var(--theme-glow), transparent 55%), linear-gradient(165deg, var(--theme-deep), var(--theme-dusk));
+}

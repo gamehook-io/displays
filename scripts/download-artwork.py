@@ -4,7 +4,7 @@ Usage: python3 scripts/download-artwork.py
 Source order per species: PokéAPI official-artwork, then the Pokémon HOME render.
 Images are resized to 256×256 WebP with ImageMagick (`convert`) so the bundle stays small.
 Species with neither source keep using the bundled game sprites. Existing files are kept.
-This is a development-time download; the overlay serves the bundled files without external requests.
+This is a development-time download; the display serves the bundled files without external requests.
 """
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
@@ -12,7 +12,7 @@ from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import urlopen
 
-root = Path(__file__).resolve().parents[1] / 'src/pokemon/public/assets/pokemon/art'
+root = Path(__file__).resolve().parents[1] / 'src/shared/assets/pokemon/art'
 root.mkdir(parents=True, exist_ok=True)
 base = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other'
 sources = ['official-artwork', 'home']

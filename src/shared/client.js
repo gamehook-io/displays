@@ -95,7 +95,7 @@ export function createGamehookClient({ endpoint, expectedMapperId, acceptMapper,
         await get('/health');
         const mapper = await get('/mapper', true);
         if (expectedMapperId && String(mapper?.id).toLowerCase() !== expectedMapperId.toLowerCase()) {
-          throw new Error(`${waiting} — load the game mapper configured for this overlay`);
+          throw new Error(`${waiting} — load the game mapper configured for this display`);
         }
         if (acceptMapper && !acceptMapper(mapper)) throw new Error(`${waiting} — load a ${mapperRequirement}`);
         attempt.mapper = JSON.stringify(mapper);

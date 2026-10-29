@@ -1,4 +1,4 @@
-import { Meter } from '@overlay';
+import { Meter } from '@display';
 
 // Shared HP meter: green, yellow at half, red at a fifth. Used by every HP display.
 export const hpColor = (value, max) => !(max > 0) || !Number.isFinite(value) ? undefined : value / max <= .2 ? '#ed6a5f' : value / max <= .5 ? '#eec557' : undefined;

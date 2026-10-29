@@ -1,5 +1,5 @@
 import { Show } from 'solid-js';
-import { Meter } from '@overlay';
+import { Meter } from '@display';
 import { hpColor } from './HpMeter.jsx';
 
 // Presentation only: callers own mapper paths and game-specific resource rules.

@@ -31,6 +31,7 @@ jobs:
         working-directory: dist
         run: |
           touch .nojekyll
+          echo displays.gamehook.io > CNAME
           git init -b dist
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

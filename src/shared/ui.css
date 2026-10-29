@@ -1,4 +1,4 @@
-/* Rules shared by every overlay: fonts, glass panel, resource bars, and stat grids. */
+/* Rules shared by every display: fonts, glass panel, resource bars, and stat grids. */
 @font-face {
   font-family: 'Outfit';
   src: url('./fonts/Outfit-Variable.woff2') format('woff2');

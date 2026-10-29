@@ -1,0 +1,13 @@
+/* Rules shared by interactive bottom screens: fitted stage, letterbox, fullscreen button, focus ring. */
+html, body, #root { background: var(--bs-letterbox, #05070c); }
+body { overscroll-behavior: none; }
+.bs-viewport { position: fixed; inset: 0; overflow: hidden; background: var(--bs-letterbox, #05070c); touch-action: manipulation; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+.bs-stage { position: absolute; transform-origin: top left; overflow: hidden; }
+.bs-stage button { font: inherit; color: inherit; cursor: pointer; }
+.bs-stage button:focus-visible, .bs-stage [data-nav]:focus-visible { outline: 4px solid var(--bs-focus, #fff); outline-offset: 3px; }
+.bs-fullscreen { position: absolute; right: 10px; bottom: 10px; z-index: 20; display: grid; place-items: center; width: 34px; height: 34px; padding: 0; border: 1px solid #ffffff30; border-radius: 9px; background: #0009; color: #fff; opacity: 0; transition: opacity .25s ease; cursor: pointer; }
+.bs-fullscreen.awake, .bs-fullscreen:hover, .bs-fullscreen:focus-visible { opacity: .85; }
+.bs-fullscreen:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+@media (hover: none) { .bs-fullscreen { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { .bs-fullscreen { transition: none; } }
+.bs-viewport[data-input="pad"] .bs-stage :focus { outline: 4px solid var(--bs-focus, #fff); outline-offset: 3px; }
