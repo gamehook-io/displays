@@ -31,16 +31,17 @@ export function FullscreenToggle() {
   </Show>;
 }
 
-// A fixed-ratio design stage fitted to the window (letterboxed, centered, uniformly scaled) for interactive
-// menu pages. `width` x `height` are design units; children lay out inside that box. Unlike Scene, the
-// stage accepts pointer, touch, keyboard, and gamepad input. Mark controls `data-shoulder="-1"` / `"1"` to
+// A design stage that fills the window, for interactive menu pages. `height` is the design height that
+// maps to the window height and the layout width stretches to the window, so there is no fixed aspect
+// ratio or letterboxing. Windows narrower than `width` (minimum layout width) scale by width instead and
+// the layout stretches taller. Unlike Scene, the stage accepts pointer, touch, keyboard, and gamepad input. Mark controls `data-shoulder="-1"` / `"1"` to
 // have L1/R1 (PageUp/PageDown) click them, and scrolling lists `data-nav data-scroll` so the d-pad scrolls them.
 export function BottomScreen(props) {
-  const [fit, setFit] = createSignal({ scale: 1, left: 0, top: 0 });
+  const [fit, setFit] = createSignal({ scale: 1, width: props.width, height: props.height });
   let stage, viewport;
   const resize = () => {
     const scale = Math.min(innerWidth / props.width, innerHeight / props.height);
-    setFit({ scale, left: (innerWidth - props.width * scale) / 2, top: (innerHeight - props.height * scale) / 2 });
+    setFit({ scale, width: innerWidth / scale, height: innerHeight / scale });
   };
   onMount(() => {
     resize();
@@ -56,7 +57,7 @@ export function BottomScreen(props) {
     onCleanup(() => { window.removeEventListener('resize', resize); viewport.removeEventListener('pointerdown', usePointer); removeKeyboard(); removePad(); });
   });
   return <div class="bs-viewport" ref={viewport}>
-    <main class="bs-stage" ref={stage} style={{ width: `${props.width}px`, height: `${props.height}px`, left: `${fit().left}px`, top: `${fit().top}px`, transform: `scale(${fit().scale})` }}>
+    <main class="bs-stage" ref={stage} style={{ width: `${fit().width}px`, height: `${fit().height}px`, left: 0, top: 0, transform: `scale(${fit().scale})` }}>
       {props.children}
     </main>
     <FullscreenToggle />

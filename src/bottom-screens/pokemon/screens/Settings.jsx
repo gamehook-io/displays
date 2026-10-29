@@ -15,16 +15,10 @@ export default function Settings(props) {
   const update = (index, value) => setColor(rgb().map((channel, at) => (at === index ? value : channel)));
   return <section class="bs-screen">
     <Header nav={props.nav} title="Settings" />
-    <ul class="settings">
-      <For each={options}>{(option, index) => <li><button type="button" class="setting" role="switch" aria-checked={setting(option.key)} data-nav-default={index() === 0 ? '' : undefined} onClick={() => toggleSetting(option.key)}>
-        <span><strong>{option.label}</strong><small>{option.note}</small></span>
-        <i class="switch" classList={{ on: setting(option.key) }} aria-hidden="true" />
-      </button></li>}</For>
-    </ul>
     <div class="color-panel">
       <strong>Primary color</strong>
       <div class="color-modes">
-        <button type="button" aria-pressed={!custom()} onClick={() => setColor('default')}>Default</button>
+        <button type="button" aria-pressed={!custom()} data-nav-default onClick={() => setColor('default')}>Default</button>
         <button type="button" aria-pressed={custom()} onClick={() => setColor(rgb())}>Custom</button>
         <Show when={custom()}><span class="color-swatch" style={{ background: customPalette(rgb())[1] }} /></Show>
       </div>
@@ -32,5 +26,11 @@ export default function Settings(props) {
         <span>{label}</span><input type="range" min="0" max="255" value={rgb()[index]} aria-label={label} onInput={event => update(index, Number(event.currentTarget.value))} /><b>{rgb()[index]}</b>
       </>}</For></div></Show>
     </div>
+    <ul class="settings">
+      <For each={options}>{option => <li><button type="button" class="setting" role="switch" aria-checked={setting(option.key)} onClick={() => toggleSetting(option.key)}>
+        <span><strong>{option.label}</strong><small>{option.note}</small></span>
+        <i class="switch" classList={{ on: setting(option.key) }} aria-hidden="true" />
+      </button></li>}</For>
+    </ul>
   </section>;
 }

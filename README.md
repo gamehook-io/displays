@@ -232,7 +232,7 @@ A bottom screen is an interactive page, like the touch screen of a DS game, for 
 
 Open `/bottom-screens/pokemon/` (or `?demo=1` for fixtures). The Pokémon screen has a home menu, party with a summary page per Pokémon, bag, Pokédex, and the current area's wild Pokémon. Sections the loaded mapper cannot supply hide or are disabled.
 
-- **Sizing.** `BottomScreen` fits a fixed 4:3 design stage (1024 × 768) to the window, letterboxed and uniformly scaled.
+- **Sizing.** `BottomScreen` fills the browser window with no fixed aspect ratio. The design height (768) maps to the window height and the layout width follows the window; windows narrower than 768 scale by width instead.
 - **Full screen.** A faint corner button, or the `F` key. It fades out until the pointer moves.
 - **Input.** Tap or click, or the keyboard: arrow keys move focus, `Z` activates, `X`/`Esc`/`Backspace` go back.
 - **Screens.** `createNavigator()` keeps a stack of screens (`push`, `replace`, `back`, `home`); the page renders `nav.current()`.

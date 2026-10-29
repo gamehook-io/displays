@@ -9,9 +9,8 @@ import { displayEntries, displayDocumentPath } from '../scripts/display-pages.js
 
 const read = (data, path, fallback = null) => path.split('.').reduce((node, key) => node?.[key], data) ?? fallback;
 
-test('bottom screen config is valid and 4:3', () => {
+test('bottom screen config is valid', () => {
   assert.equal(validateConfig(config), config);
-  assert.equal(config.width / config.height, 4 / 3);
 });
 
 test('entries are discovered under both kinds and served at their folder paths', () => {

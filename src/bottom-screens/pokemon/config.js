@@ -6,7 +6,8 @@ export default {
   ...connectionDefaults,
   // Optional exact version for paired mappers that cannot distinguish ROM versions.
   version: null,
-  // Design stage, 4:3 like a DS screen. It is scaled to fit the browser window.
-  width: 1024,
+  // Design stage reference. `height` maps to the window height; the layout width follows the window,
+  // and `width` is the minimum layout width before the stage scales down by width instead.
+  width: 768,
   height: 768,
 };
