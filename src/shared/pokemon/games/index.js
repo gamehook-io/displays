@@ -24,6 +24,12 @@ export function resolvePokemonValue(path, read, mapper, version = null) {
   if (path === 'meta.game_key') return game.key;
   if (path === 'meta.generation') return game.generation;
   if (path === 'meta.game_version') return game.versions.includes(version) ? version : game.versions.length === 1 ? game.versions[0] : null;
+  if (['red_blue', 'yellow'].includes(game.key) && /^pokedex\.seen\.\d+$/.test(path)) {
+    const dex = Number(path.split('.').at(-1));
+    if (dex < 1 || dex > 151) return null;
+    const seen = read('player.pokedex_seen');
+    return Array.isArray(seen) && typeof seen[dex - 1] === 'boolean' ? seen[dex - 1] : null;
+  }
   if (['red_blue', 'yellow', 'gold_silver'].includes(game.key) && /^pokedex\.caught\.\d+$/.test(path)) {
     const dex = Number(path.split('.').at(-1));
     if (dex < 1 || dex > (game.generation === 1 ? 151 : 251)) return null;

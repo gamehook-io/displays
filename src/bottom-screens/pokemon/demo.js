@@ -27,6 +27,7 @@ export default function createDemo(params = new URLSearchParams()) {
     tms: { 'TM01-DynamicPunch': 0, 'TM02-Headbutt': 1, 'TM03-Curse': 1 },
   };
   if (params.get('bag') === 'none') delete demo.bag;
+  if (demo.pokedex) demo.pokedex.seen = Object.fromEntries([...Array(60).keys()].map(index => [index + 1, true]));
   if (demo.pokedex) Object.assign(demo.pokedex.caught, Object.fromEntries([1, 4, 7, 16, 17, 19, 25, 74, 156, 158, 161, 162, 163, 179, 187].map(dex => [dex, true])));
   return demo;
 }

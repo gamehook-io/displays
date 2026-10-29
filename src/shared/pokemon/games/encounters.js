@@ -1,3 +1,4 @@
+import { speciesName } from '../names.js';
 import { dexForSpecies } from './index.js';
 import pokemon from '../pokemon-types.json' with { type: 'json' };
 import stock from './stock-encounters.json' with { type: 'json' };
@@ -9,7 +10,7 @@ export function liveEncounters(value) {
   const rows = new Map();
   const add = (dex, method, low, high = low) => {
     if (!Number.isInteger(dex) || !pokemon[dex]) return;
-    if (!rows.has(dex)) rows.set(dex, { dex, name: pokemon[dex].name.replace(/-/g, ' '), details: [] });
+    if (!rows.has(dex)) rows.set(dex, { dex, name: speciesName(dex), details: [] });
     const entry = rows.get(dex);
     let detail = entry.details.find(item => item.name === method);
     if (!detail) { detail = { name: method, min: null, max: null, chance: null }; entry.details.push(detail); }

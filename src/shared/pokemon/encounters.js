@@ -1,5 +1,5 @@
+import { speciesName } from './names.js';
 import tables from './crystal-encounters.json' with { type: 'json' };
-import pokemon from './pokemon-types.json' with { type: 'json' };
 import { liveEncounters } from './games/encounters.js';
 
 const groups = ['Olivine', 'Mahogany', 'Dungeons', 'Ecruteak', 'Blackthorn', 'Cinnabar', 'Cerulean', 'Azalea', 'Lake of Rage', 'Violet', 'Goldenrod', 'Vermilion', 'Pallet', 'Pewter', 'Fast Ship', 'Indigo', 'Fuchsia', 'Lavender', 'Silver', 'Cable Club', 'Celadon', 'Cianwood', 'Viridian', 'New Bark', 'Saffron', 'Cherrygrove'];
@@ -12,7 +12,7 @@ export function routeEncounters(value) {
   if (!table || !['Morning', 'Day', 'Night'].includes(period)) return [];
   const rows = new Map();
   function add(dex, level, method, chance = null) {
-    if (!rows.has(dex)) rows.set(dex, { dex, name: pokemon[dex]?.name.replace(/-/g, ' '), methods: new Map() });
+    if (!rows.has(dex)) rows.set(dex, { dex, name: speciesName(dex), methods: new Map() });
     const entry = rows.get(dex);
     if (!entry.methods.has(method)) entry.methods.set(method, { name: method, levels: [], chance: null });
     const detail = entry.methods.get(method);

@@ -1,7 +1,7 @@
 import { For, Show, createMemo } from 'solid-js';
 import { useGamehook } from '@display';
-import { routeEncounters, groupEncounters } from '../../../shared/pokemon/encounters.js';
 import { areaName } from '../../../shared/pokemon/party.js';
+import { routeEncounters, groupEncounters } from '../../../shared/pokemon/encounters.js';
 import Header from '../Header.jsx';
 import Mon from '../Mon.jsx';
 

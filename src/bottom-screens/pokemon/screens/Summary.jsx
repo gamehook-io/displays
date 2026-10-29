@@ -30,7 +30,7 @@ export default function Summary(props) {
     index,
     name: gamehook.value(`${mon.path()}.moves.${index}.move`, null),
     pp: gamehook.value(`${mon.path()}.moves.${index}.pp`, null),
-  })).filter(move => !isBlank(move.name));
+  })).map(move => isBlank(move.name) ? { index: move.index } : move);
   const color = move => {
     const type = moveType(move.name, gamehook.value(`${mon.path()}.hidden_power.type`), gamehook.value('meta.generation', 2));
     return type ? palettes[type]?.[1] : undefined;
@@ -51,12 +51,12 @@ export default function Summary(props) {
             <For each={types()}>{type => <span class="type-chip" style={{ background: palettes[type]?.[1] }}>{cap(type)}</span>}</For>
             <Show when={mon.condition()}>{status => <i class="status" style={{ background: status().color }}>{status().label}</i>}</Show></div>
           <div class="summary-hp"><span>HP</span><HpMeter value={mon.hp()} max={mon.hpMax()} /><b>{mon.hp()} / {mon.hpMax()}</b></div>
-          <Show when={progress()}>{amount => <div class="summary-hp"><span>EXP</span><Meter label="Experience" value={amount().value} max={amount().max} color="#2880f0" /><b>{amount().max - amount().value} to next</b></div>}</Show>
+          <Show when={progress()}>{amount => <div class="summary-hp"><span>EXP</span><Meter label="Experience" value={amount().value} max={amount().max} color="#2880f0" /><b>{amount().value} / {amount().max}</b></div>}</Show>
           <Show when={mon.heldItem()}>{item => <p class="held">Holding <strong>{item()}</strong></p>}</Show>
         </div>
         <div class="summary-side">
           <Show when={stats().length}><div class="stat-list"><For each={stats()}>{entry => <div><span>{entry.label}</span><b>{entry.value}</b></div>}</For></div></Show>
-          <Show when={moves().length}><ul class="move-list"><For each={moves()}>{move => <li style={{ '--move': color(move) }}><span>{move.name}</span><Show when={Number.isFinite(move.pp)}><b>PP {move.pp}</b></Show></li>}</For></ul></Show>
+          <Show when={moves().some(move => move.name)}><ul class="move-list"><For each={moves()}>{move => <li classList={{ empty: !move.name }} style={{ '--move': move.name ? color(move) : undefined }}><span>{move.name}</span><Show when={Number.isFinite(move.pp)}><b>PP {move.pp}</b></Show></li>}</For></ul></Show>
         </div>
       </div>
     </Show>
